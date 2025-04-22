@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 import requests
 import psutil
-from monitor.config import PRIMARY_SERVER
+from config import PRIMARY_SERVER
 
 PRIMARY_SERVER = "http://your-custom-server-ip:port"  # Replace with your server IP
 CHECK_INTERVAL = 5  # seconds
