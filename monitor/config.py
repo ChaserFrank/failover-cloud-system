@@ -1,31 +1,17 @@
-# Configuration file for the monitoring service
+# Configuration file for server monitoring system
 
-from flask import Flask, jsonify
-import psutil
-import requests
+# Mock API endpoints (local FastAPI mock server)
+SERVER_HEALTH_ENDPOINT = "http://localhost:8080/health"
+SERVER_METRICS_ENDPOINT = "http://localhost:8080/metrics"
+SERVER_LOGS_ENDPOINT = "http://localhost:8080/logs"
+SERVER_RESET_ENDPOINT = "http://localhost:8080/reset"
 
-app = Flask(__name__)
+# Monitoring interval in seconds
+MONITOR_INTERVAL = 5  # adjust as needed
 
-PRIMARY_SERVER = "http://your-custom-server-ip:port"  # Replace with actual server
+# Failover settings
+FAILOVER_ENABLED = True
+FAILOVER_TRIGGER_STATUS = "down"
 
-def check_server():
-    """Check if the primary server is reachable."""
-    try:
-        r = requests.get(PRIMARY_SERVER, timeout=3)
-        return r.status_code == 200
-    except requests.RequestException:
-        return False
-
-
-@app.route("/api/health", methods=["GET"])
-def get_health():
-    """Endpoint to check the health of the server."""
-    health = {
-        "cpu": psutil.cpu_percent(),
-        "memory": psutil.virtual_memory().percent,
-        "server_status": "UP" if check_server() else "DOWN"
-    }
-    return jsonify(health)
-
-if __name__ == '__main__':
-    app.run(port=5001)
+# Optional: backup server URL (can be simulated later)
+BACKUP_SERVER_IP = "127.0.0.2"
