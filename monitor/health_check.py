@@ -2,9 +2,13 @@
 
 import time
 from datetime import datetime
+import sys
+import os
 import requests
 import psutil
-from config import PRIMARY_SERVER
+from monitor.config import PRIMARY_SERVER, SERVERS 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 
 PRIMARY_SERVER = "http://your-custom-server-ip:port"  # Replace with your server IP
 CHECK_INTERVAL = 5  # seconds

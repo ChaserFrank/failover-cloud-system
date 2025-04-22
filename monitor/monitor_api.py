@@ -3,7 +3,7 @@
 import os
 from datetime import datetime
 from flask import Flask, jsonify
-from health_check import check_server_health, get_usage
+from monitor.health_check import check_server_health, get_usage
 
 app = Flask(__name__)
 

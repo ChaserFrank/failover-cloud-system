@@ -1,3 +1,5 @@
+# monitor/config.py
+
 # Configuration file for server monitoring system
 
 # Mock API endpoints (local FastAPI mock server)
@@ -15,3 +17,13 @@ FAILOVER_TRIGGER_STATUS = "down"
 
 # Optional: backup server URL (can be simulated later)
 BACKUP_SERVER_IP = "127.0.0.2"
+
+# Primary server configuration (used for live monitoring & failover system)
+PRIMARY_SERVER = {
+    "name": "Mock Server 1",
+    "url": "http://localhost:8080",
+    "location": "Localhost"
+}
+
+# Optional: list of all monitored servers (future-proofing)
+SERVERS = [PRIMARY_SERVER]
