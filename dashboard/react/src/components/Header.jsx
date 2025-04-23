@@ -7,7 +7,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
       <div className="flex items-center space-x-2">
         <CloudCog className="w-8 h-8 text-blue-600 dark:text-blue-400" />
         <h1 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">
-          Cloud Failover Dashboard
+          Cloud Failover
         </h1>
       </div>
       
