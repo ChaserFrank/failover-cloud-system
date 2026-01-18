@@ -6,7 +6,7 @@ const UsageStats = ({ cpuUsage, memoryUsage }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 h-full">
       <h2 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
-        Resource Usage
+        Resources Usage Stats
       </h2>
       
       <div className="space-y-6">
