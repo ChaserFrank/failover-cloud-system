@@ -19,14 +19,14 @@ const Alerts = ({ serverData, previousServerData }) => {
       
       // Server came back up
       if (wasServerDown && !isServerDown) {
-        showAlert('success', 'Server is UP!', 'Server has recovered and is now reachable.');
+        showAlert('success', 'Server is UP!', 'Server has recovered and now its reachable.');
       }
       
       // Failover status changed
       if (failoverChanged) {
         const message = serverData.failover === 'PRIMARY' 
           ? 'System has switched to PRIMARY server.'
-          : 'FAILOVER detected! System has switched to BACKUP server.';
+          : 'FAILOVER detected! System has switched to a BACKUP server.';
         
         showAlert(
           serverData.failover === 'PRIMARY' ? 'success' : 'warning',

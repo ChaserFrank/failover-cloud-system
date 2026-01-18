@@ -12,7 +12,7 @@ const ServerStatus = ({ serverData, lastUpdated }) => {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center">
           <Server className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-          <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Server Status</h2>
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Server Status: </h2>
         </div>
         <span className="text-xs text-gray-500 dark:text-gray-400">
           Updated at: {formattedTime}
