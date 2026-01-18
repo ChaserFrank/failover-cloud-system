@@ -15,7 +15,7 @@ const ServerStatus = ({ serverData, lastUpdated }) => {
           <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Server Status</h2>
         </div>
         <span className="text-xs text-gray-500 dark:text-gray-400">
-          Updated: {formattedTime}
+          Updated at: {formattedTime}
         </span>
       </div>
       
@@ -38,7 +38,7 @@ const ServerStatus = ({ serverData, lastUpdated }) => {
         <span className="text-sm text-gray-700 dark:text-gray-300">
           {isOnline 
             ? 'Health check successful'
-            : 'Health check failed - connectivity issue detected'
+            : 'Health check failed - some connectivity issue detected'
           }
         </span>
       </div>

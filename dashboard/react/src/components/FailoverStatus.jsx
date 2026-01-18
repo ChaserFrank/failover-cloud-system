@@ -20,7 +20,7 @@ const FailoverStatus = ({ failoverStatus, lastFailoverEvent, onResetFailover, lo
       isTransitioning && !isPrimary ? 'animate-pulse bg-red-50 dark:bg-red-900/20' : ''
     }`}>
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Failover Status</h2>
+        <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Failover Server Status</h2>
         <button
           onClick={onResetFailover}
           disabled={loading || isPrimary}

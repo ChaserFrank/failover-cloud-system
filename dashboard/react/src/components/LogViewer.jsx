@@ -17,7 +17,7 @@ const LogViewer = () => {
 
   return (
     <div className="p-4 bg-gray-800 rounded-xl text-white mt-4">
-      <h2 className="text-xl font-semibold mb-2">System Logs</h2>
+      <h2 className="text-xl font-semibold mb-2">System Log</h2>
       <div className="flex gap-4 mb-2">
         {["All", "Info", "Warn", "Error"].map((lvl) => (
           <button
